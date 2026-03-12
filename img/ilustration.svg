@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 780" fill="none">
+  <defs>
+    <style>
+      .sky { fill: #b8a9f5; }
+      .dark { fill: #0d0d0d; }
+      .table { fill: #1a1a2e; }
+      .cat-body { fill: #0d0d0d; }
+      .cat-eye { fill: #d4a020; }
+      .moon-fill { fill: #1a1a2e; }
+      .cloud-fill { fill: #0d0d0d; }
+      .silhouette { fill: #1a1a2e; }
+      .lamp-shade { fill: #0d0d0d; }
+
+      .leaf-sway-1 { animation: sway 8s ease-in-out infinite; }
+      .leaf-sway-2 { animation: sway 8s ease-in-out infinite 2.5s; }
+      .leaf-sway-3 { animation: sway 8s ease-in-out infinite 5s; }
+
+      @keyframes sway {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(3px); }
+      }
+
+      .candy { fill: #e85d2a; }
+      .candy-light { fill: #f0784a; }
+      .pencil { fill: #f5f0e8; }
+    </style>
+    <clipPath id="clipAtLine">
+      <rect x="0" y="0" width="1400" height="480"/>
+    </clipPath>
+  </defs>
+
+  <!-- ==================== -->
+  <!--     BACKGROUND       -->
+  <!-- ==================== -->
+  <!-- Sky -->
+  <rect class="sky" width="1400" height="780"/>
+
+  <!-- Table / dark bottom area (55% split to match hero) -->
+  <rect class="dark" x="0" y="429" width="1400" height="351"/>
+
+  <!-- ==================== -->
+  <!--     MOON             -->
+  <!-- ==================== -->
+  <g id="moon" transform="translate(780, 100)">
+    <path class="moon-fill" d="M30,0 C12,0 0,16 0,35 C0,54 12,70 30,70 C18,62 12,50 12,35 C12,20 18,8 30,0Z"/>
+  </g>
+
+
+  <!-- ==================== -->
+  <!--     BOOKS (silhouette) -->
+  <!-- ==================== -->
+  <g id="books" transform="translate(480, 310)">
+    <!-- Livros empilhados verticais e inclinados -->
+    <rect class="silhouette" x="0" y="20" width="28" height="140" rx="2" transform="rotate(-8 14 90)"/>
+    <rect class="silhouette" x="30" y="10" width="25" height="150" rx="2" transform="rotate(-3 42 85)"/>
+    <rect class="silhouette" x="58" y="0" width="30" height="160" rx="2" transform="rotate(2 73 80)"/>
+    <rect class="silhouette" x="92" y="5" width="22" height="155" rx="2" transform="rotate(5 103 82)"/>
+    <rect class="silhouette" x="118" y="15" width="28" height="145" rx="2" transform="rotate(8 132 87)"/>
+    <rect class="silhouette" x="148" y="25" width="24" height="135" rx="2" transform="rotate(12 160 92)"/>
+    <rect class="silhouette" x="172" y="40" width="20" height="120" rx="2" transform="rotate(18 182 100)"/>
+    <!-- Livro deitado na base -->
+    <rect class="silhouette" x="-20" y="130" width="120" height="22" rx="3" transform="rotate(-3 40 141)"/>
+    <rect class="silhouette" x="-10" y="148" width="100" height="18" rx="3" transform="rotate(2 40 157)"/>
+  </g>
+
+  <!-- ==================== -->
+  <!--     CAT              -->
+  <!-- ==================== -->
+  <g id="cat" transform="translate(570, 230)">
+    <!-- Cat body sitting on books -->
+    <!-- Tail -->
+    <path class="cat-body" d="M-15,95 Q-35,80 -40,55 Q-42,40 -30,35 Q-20,32 -15,42 Q-8,55 -5,70" stroke-linecap="round"/>
+    <!-- Body -->
+    <ellipse class="cat-body" cx="15" cy="82" rx="22" ry="25"/>
+    <!-- Head -->
+    <ellipse class="cat-body" cx="15" cy="48" rx="18" ry="16"/>
+    <!-- Ears -->
+    <polygon class="cat-body" points="0,38 -4,15 12,32"/>
+    <polygon class="cat-body" points="30,38 34,15 18,32"/>
+    <!-- Eyes -->
+    <g id="catEyes">
+      <ellipse class="cat-eye" cx="8" cy="48" rx="3.5" ry="3" opacity="0.9"/>
+      <ellipse class="cat-eye" cx="22" cy="48" rx="3.5" ry="3" opacity="0.9"/>
+      <!-- Pupils -->
+      <ellipse cx="8" cy="48" rx="1.5" ry="2.5" fill="#0d0d0d"/>
+      <ellipse cx="22" cy="48" rx="1.5" ry="2.5" fill="#0d0d0d"/>
+      <!-- Blink lids -->
+      <ellipse id="catBlinkL" cx="8" cy="48" rx="4.5" ry="0" fill="#0d0d0d">
+        <animate attributeName="ry" values="0;0;4;0;0" keyTimes="0;0.42;0.45;0.48;1" dur="4s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse id="catBlinkR" cx="22" cy="48" rx="4.5" ry="0" fill="#0d0d0d">
+        <animate attributeName="ry" values="0;0;4;0;0" keyTimes="0;0.42;0.45;0.48;1" dur="4s" begin="0.05s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+    <!-- Paws in front -->
+    <ellipse class="cat-body" cx="4" cy="100" rx="8" ry="5"/>
+    <ellipse class="cat-body" cx="26" cy="100" rx="8" ry="5"/>
+  </g>
+
+  <!-- ==================== -->
+  <!--     PLANTS (silhouette) -->
+  <!-- ==================== -->
+  <g id="plants" transform="translate(780, 250)">
+    <!-- Vaso grande -->
+    <path class="silhouette" d="M20,180 Q10,160 15,130 Q20,100 40,100 Q60,100 65,130 Q70,160 60,180Z"/>
+    <!-- Tronco e folhas -->
+    <path class="silhouette" d="M40,100 Q38,70 42,50" stroke="#1a1a2e" stroke-width="5" fill="none"/>
+    <!-- Folhas variadas -->
+    <path class="silhouette leaf-sway-1" d="M42,50 Q55,30 65,20 Q60,40 50,50Z"/>
+    <path class="silhouette leaf-sway-2" d="M42,50 Q30,25 20,15 Q28,38 38,50Z"/>
+    <path class="silhouette leaf-sway-3" d="M40,60 Q58,45 72,42 Q60,55 48,62Z"/>
+    <path class="silhouette leaf-sway-1" d="M40,60 Q22,42 12,35 Q25,50 36,60Z"/>
+    <path class="silhouette leaf-sway-2" d="M42,70 Q60,58 78,55 Q65,68 50,72Z"/>
+    <path class="silhouette leaf-sway-3" d="M38,70 Q18,55 5,48 Q20,62 34,72Z"/>
+    <!-- Planta pendente (direita) -->
+    <path class="silhouette leaf-sway-2" d="M42,45 Q65,35 80,45 Q90,50 85,55 Q75,48 60,48 Q48,50 42,50Z"/>
+    <path class="silhouette leaf-sway-1" d="M78,50 Q95,55 105,65 Q100,58 85,52Z"/>
+    <path class="silhouette leaf-sway-3" d="M85,55 Q100,62 108,75 Q102,65 90,58Z"/>
+    <!-- Pinheirinho/planta alta atrás -->
+    <path class="silhouette" d="M-15,180 Q-18,160 -15,140" stroke="#1a1a2e" stroke-width="4" fill="none"/>
+    <path class="silhouette leaf-sway-3" d="M-15,140 Q-25,120 -30,100 Q-15,115 -10,130 Q-5,115 0,100 Q-5,120 -15,140Z"/>
+    <path class="silhouette leaf-sway-1" d="M-15,120 Q-22,100 -28,80 Q-15,95 -8,108 Q-2,92 5,78 Q0,98 -15,120Z"/>
+    <path class="silhouette leaf-sway-2" d="M-12,100 Q-18,78 -22,55 Q-12,72 -6,85 Q0,70 6,55 Q2,75 -12,100Z"/>
+    <!-- Flor/tulipa -->
+    <path class="silhouette" d="M-50,180 Q-52,160 -48,145" stroke="#1a1a2e" stroke-width="3" fill="none"/>
+    <path class="silhouette leaf-sway-1" d="M-48,145 Q-60,130 -55,118 Q-48,110 -42,118 Q-36,125 -48,145Z"/>
+    <path class="silhouette leaf-sway-2" d="M-48,145 Q-38,128 -40,118 Q-48,125 -48,145Z"/>
+    <!-- Folha de monstera -->
+    <path class="silhouette leaf-sway-3" d="M100,180 Q95,160 98,145 Q102,135 108,130 Q112,135 115,145 Q118,155 110,170 Q115,160 120,155 Q118,165 112,180Z"/>
+    <!-- Vasinho pequeno -->
+    <path class="silhouette" d="M90,180 Q88,170 92,165 Q96,160 100,165 Q104,170 102,180Z"/>
+    <!-- Folha saindo do vasinho -->
+    <path class="silhouette leaf-sway-2" d="M96,165 Q90,150 85,140 Q95,148 96,158Z"/>
+    <path class="silhouette leaf-sway-1" d="M96,165 Q102,148 108,140 Q100,150 96,160Z"/>
+  </g>
+
+  <!-- ==================== -->
+  <!--     LAMP             -->
+  <!-- ==================== -->
+  <g id="lamp" transform="translate(1150, 180)">
+    <!-- Lamp shade (trapezoid) -->
+    <path class="lamp-shade" d="M0,0 L160,0 L180,120 L-20,120Z"/>
+    <!-- Pole -->
+    <rect class="lamp-shade" x="72" y="120" width="16" height="140"/>
+    <!-- Base -->
+    <rect class="lamp-shade" x="30" y="255" width="100" height="12" rx="4"/>
+    <!-- Pull string -->
+    <line x1="130" y1="120" x2="130" y2="165" stroke="#0d0d0d" stroke-width="2"/>
+    <circle cx="130" cy="168" r="4" fill="#0d0d0d"/>
+  </g>
+
+  <!-- ==================== -->
+  <!--     PENCILS          -->
+  <!-- ==================== -->
+  <g id="pencils" transform="translate(370, 440)">
+    <rect class="pencil" x="0" y="0" width="60" height="8" rx="2" transform="rotate(-15 30 4)"/>
+    <rect class="pencil" x="15" y="12" width="55" height="8" rx="2" transform="rotate(-8 42 16)" opacity="0.9"/>
+  </g>
+
+  <!-- ==================== -->
+  <!--     CANDY            -->
+  <!-- ==================== -->
+  <g id="candy" transform="translate(250, 490)">
+    <!-- Candy bar 1 -->
+    <g transform="rotate(-20 30 15)">
+      <rect class="candy" x="0" y="0" width="55" height="25" rx="4"/>
+      <rect class="candy-light" x="5" y="5" width="20" height="15" rx="2" opacity="0.5"/>
+      <!-- Arrow/logo marks -->
+      <polygon fill="#f5f0e8" points="35,8 42,12 35,16" opacity="0.8"/>
+      <polygon fill="#f5f0e8" points="42,8 49,12 42,16" opacity="0.6"/>
+    </g>
+    <!-- Candy bar 2 -->
+    <g transform="translate(50, 15) rotate(-5 25 12)">
+      <rect class="candy" x="0" y="0" width="50" height="22" rx="4"/>
+      <polygon fill="#f5f0e8" points="15,6 22,11 15,16" opacity="0.8"/>
+      <polygon fill="#f5f0e8" points="22,6 29,11 22,16" opacity="0.6"/>
+    </g>
+  </g>
+
+
+  <!-- ==================== -->
+  <!--     COELHINHA         -->
+  <!-- ==================== -->
+  <image href="coelhinha.png" x="-70" y="220" width="520" height="338"/>
+
+</svg>
