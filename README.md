@@ -80,4 +80,4 @@ O site adapta automaticamente o layout conforme o tamanho da tela:
 
 ---
 
-Desenvolvido por **Isla** com auxilio de IA
+Desenvolvido por **Isla** 
